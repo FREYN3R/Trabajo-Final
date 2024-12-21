@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Web Interactivo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Portafolio</h1>
+        <nav>
+            <ul>    
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <img src="img/Foto_1.jpg" alt="Imagen de perfil">
+        <div>
+            <h2>Acerca de Mí</h2>
+            <p>¡Hola! Soy un desarrollador fullstack en crecimiento con una pasión por los proyectos gráficos e interactivos. Con experiencia en HTML, CSS y JavaScript, he comenzado a explorar herramientas como jQuery y Bootstrap, y estoy ampliando mis conocimientos en Java y MySQL. Me inspira la creación de aplicaciones atractivas y funcionales que combinan belleza y facilidad de uso.</p>
+            <p>Mi objetivo es avanzar continuamente con las nuevas tecnologías y mejorar mis habilidades en el desarrollo web. Aunque estoy en el inicio de mi carrera, estoy emocionado por lo que está por venir y motivado por las infinitas posibilidades de construir algo significativo.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project">
+            <h3>Proyecto 1: Almacén de Ventas</h3>
+            <p>Nuestra página web "Almacén de ventas" está diseñada para ofrecerte una experiencia única en la compra de calzado exclusivo de la marca Air Jordan. Explora nuestra selección de zapatillas de edición limitada, incluyendo colaboraciones especiales con artistas y diseñadores como J Balvin, Chris Paul, y A Ma Maniére.</p>
+            <a href="Proyectos/Proyecto_1/index.html" target="_blank">Ver Proyecto</a>
+        </div>
+        <div class="project">
+            <h3>Proyecto 2: Validación de Formularios</h3>
+            <p>Este proyecto incluye un formulario interactivo con validación en tiempo real, asegurando que las contraseñas coincidan y que el usuario cumpla con los requisitos de longitud y formato. Ideal para aprender las mejores prácticas en usabilidad y validación de datos.</p>
+            <a href="Proyectos/Proyecto_2/index.html" target="_blank">Ver Proyecto</a>
+        </div>
+    </section>
+
+    <section class="contact-form">
+
+        <h2>Fromulario de Contacto</h2>
+        <form action="" id="contactForm">
+
+        <label for="name">Nombre</label>
+        <input type="text" id="
+        name" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electronico</label>
+        <input type="email" name="email" id="email" placeholder="Tu correo" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea name="message" id="message" placeholder="Escribe el mensaje aqui" rows="S" required ></textarea>
+
+        <button type="submit">Enviar</button>
+            
+    </form>
+
+    <p id="statusMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Portafolio Web Interactivo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        //Inicializar EmailJS con tu clave pública//
+
+        (function(){
+            emailjs.init("7LvRtj5wimeNV9Pcz");
+
+        })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>   
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Proyecto 1</title>
+</head>
+<body>
+    <header><h1>Almacen de ventas</h1></header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#productos">productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="productos">
+
+            <h2>Bienvenidos a nuestro almacen de ventas</h2>
+
+            <p>Nuestra página web "Almacén de ventas" está diseñada para ofrecerte una experiencia única en la compra de calzado exclusivo de la marca Air Jordan. Aquí podrás explorar una selección de zapatillas de edición limitada, incluyendo colaboraciones especiales con artistas y diseñadores como J Balvin, Chris Paul, y A Ma Maniére. Cada producto está cuidadosamente descrito, destacando sus características y diseño, acompañado de imágenes que te permitirán apreciar cada detalle. Hemos organizado el sitio para que puedas navegar fácilmente entre nuestras secciones de inicio, productos y contacto, brindándote toda la información que necesitas para una compra segura y eficiente.</p>
+
+            <h2>Nuestros productos</h2>
+
+                <div class="pro-con"id="producto-1">
+                    <h2>Producto 1</h2>
+                    <p>Las Air Jordan 1 High OG Spider-Man Across the Spider-Verse ofrecen un emocionante viaje a través del Spider-Verse, fusionando el legendario legado de las Air Jordan 1 con la fascinante estética de Spider-Man. Esta colaboración de Nike y Jordan Brand, conocida como “Next Chapter”, es la segunda incursión en el universo del Spider-Verse, y promete llevar la experiencia a nuevas alturas.</p>
+                    <img src="Img/JSM.png" alt="Air Jordan 1 High OG Spider-Man Across the Spider-Verse"><br>
+                    <h3>Precion: 525.000</h3>
+                    <label for="producto-1"></label>
+                    <input type="checkbox" id="producto-1" name="producto" >
+                </div>
+
+                <div class="pro-con" id="producto-1">
+                    <h2>Producto 2</h2>
+                    <p>Sumérgete en la fusión perfecta de estilo y comodidad con las Air Jordan 1 Low University Blue Grey (W), unas zapatillas de perfil bajo diseñadas para brindar un toque de elegancia a tus actividades diarias. Estas zapatillas, que alcanzan justo debajo del tobillo, ofrecen una opción versátil que se adapta a diversas ocasiones, desde caminatas casuales hasta situaciones más relajadas. La combinación de colores University Blue y Grey agrega un toque de frescura y sofisticación, elevando tu estilo con cada paso.</p>
+                    <img src="Img/AJU.png" alt="Air Jordan low University"><br>
+                    <h3>Precion: 450.000</h3>
+                    <label for="producto-2"></label>
+                    <input type="checkbox" id="producto-2" name="producto">
+                </div>
+
+                <div class="pro-con" id="producto-1">
+                    <h2>Producto 3</h2>
+                    <p>La emocionante colaboración entre James Whitner de A Ma Maniére y Jordan Brand ha dado vida a una silueta AJ 4 verdaderamente lujosa. Las A Ma Maniére x Air Jordan 4 Violet Ore son una expresión de sofisticación y estilo, fusionando la visión única de A Ma Maniére con el legado atemporal de Jordan.</p>
+                    <img src="Img/AMM.png" alt="Jordan 4 A MA MANIÉRE"><br>
+                    <h3>Precion: 610.000</h3>
+                    <label for="producto-3"></label>
+                    <input type="checkbox" id="producto-3" name="producto">
+                </div>
+
+                <div class="pro-con" id="producto-1">
+                    <h2>Producto 4</h2>
+                    <p>Embárcate en un viaje visual a través de las Air Jordan 3 x J Balvin Medellin Sunset, una colaboración dinámica que fusiona la energía vibrante del reguetonero J Balvin con la icónica marca Jordan. Estas zapatillas únicas son más que un calzado; son un lienzo narrativo que captura la esencia estética de Medellín, Colombia, la ciudad natal de J Balvin. Inspirado en los impresionantes atardeceres de Medellín, el diseño de estas zapatillas refleja la armoniosa transición de colores que caracteriza la ciudad al caer la noche.</p>
+                    <img src="Img/AJJ.png" alt="Air Jordan 3 x J Balvin"><br>
+                    <h3>Precion: 500.000</h3>
+                    <label for="producto-4"></label>
+                    <input type="checkbox" id="producto-4" name="producto">
+                </div>
+
+                <div class="pro-con" id="producto-1">
+                    <h2>Producto 5</h2>
+                    <p>Sumérgete en la sofisticación floral de las Air Jordan 1 diseñadas por Chris Paul, las Air Jordan 1 Retro Low OG x Chris Paul Give Them Flowers. Estas zapatillas son mucho más que un calzado; son una obra de arte que fusiona la destreza deportiva de Chris Paul con la elegancia floral más refinada. Cada detalle ha sido cuidadosamente diseñado para ofrecer una experiencia única y exclusiva.</p>
+                    <img src="Img/JOCP.png" alt="Air Jordan 1 Retro Low OG x Chris Paul"><br>
+                    <h3>Precion: 200.000</h3>
+                    <label for="producto-5"></label>
+                    <input type="checkbox" id="producto-5" name="producto">
+                </div>
+        </article>
+    </main>
+
+    <button type="button" id="enviar">Enviar pedido</button>
+    <p id="mensaje"></p>
+
+    <footer id="contacto">
+        <h3>Contacto</h3>
+        <p><b>Direccion:</b> Crr 41 J sur 19 bis 39</p>
+        <p><b>Telefono:</b> 3215442604</p>
+        <p><b>E-mail:</b> fnazareno@estudiante.uniajc.edu.co</p>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const productos = document.querySelectorAll('input[type="checkbox"]');
+    const mensaje = document.getElementById('mensaje');
+    const enviarButton = document.getElementById('enviar');
+    
+    enviarButton.addEventListener('click', (event) => {
+      const algunProductoSeleccionado = Array.from(productos).some(producto => producto.checked);
+    
+      if (algunProductoSeleccionado) {
+        mensaje.textContent = 'Pedido enviado';
+        mensaje.style.color = 'green';
+      } else {
+        event.preventDefault();
+        mensaje.textContent = 'Debes seleccionar al menos un producto';
+        mensaje.style.color = 'red';
+      }
+    });
+    </script>
+
+</html>
